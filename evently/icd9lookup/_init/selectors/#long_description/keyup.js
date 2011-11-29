@@ -3,7 +3,7 @@ function(){
       term = $(this).val(),
       nonce = Math.random();
   $$($(this)).nonce = nonce;
-  db.view("icd9lookup/by_code", {
+  db.view("icd9lookup/by_long_description", {
     startkey : term,
     endkey : term+"\u9999", //I don't know why only \u9999 works, not \uFFFF
     limit : 25,
