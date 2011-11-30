@@ -6,7 +6,7 @@ function(){
   db.view("icd9lookup/by_long_description", {
     startkey : term,
     endkey : term+"\u9999", //I don't know why only \u9999 works, not \uFFFF
-    limit : 25,
+    limit : 100,
     success : function(names){
       if($$($(this)).nonce = nonce){
       $("#results").html(
